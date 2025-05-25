@@ -3,6 +3,7 @@
 1. [Just Dynamic DHCP, No DNS changes, No Static IP Reservation](#just-dynamic-dhcp-no-dns-changes-no-static-ip-reservation)
 2. [Static IPV4 Reservation](#Static-IPV4-Reservation)
 3. [Using DNSMASQ as main DNS and Forward Query to Unbound](#Using-DNSMASQ-as-main-DNS-and-Forward-Query-to-Unbound)
+4. [Using TAG to set custom DNS Server for some devices](## Using-TAG-to-set-custom-DNS-Server-for-some-devices)
     
 ## Just Dynamic DHCP, No DNS changes, No Static IP Reservation
 This assume that you have DNS service runnning on Opnsense (eg, port 53)
@@ -117,4 +118,30 @@ server=127.0.0.1#5053
 ![image](https://github.com/user-attachments/assets/f7b2f630-b2eb-474c-a3ef-fbd8cd3878ae)
 
 
+## Using TAG to set custom DNS Server for some devices
+
+You can send a different DNS server to specific device during DHCP with TAG. 
+
+1. Add a TAG
    
+Service --> Dnsmasq --> DHCP Tags
+
+![image](https://github.com/user-attachments/assets/415c2705-c5dd-4498-8e71-7d899c4b74dd)
+
+2. Configure specific device to apply the tag
+
+Service --> Dnsmasq --> Hosts
+
+![image](https://github.com/user-attachments/assets/e9708134-6a47-4836-a351-da80558045e1)
+   
+![image](https://github.com/user-attachments/assets/5feabd86-c489-416d-957b-973eff1f622c)
+
+
+3. Configure action to perform for this tag:
+   
+Service --> Dnsmasq --> DHCP Options
+
+![image](https://github.com/user-attachments/assets/5db4c3fa-14e6-4fcd-b080-ac62e31b9d62)
+
+
+
