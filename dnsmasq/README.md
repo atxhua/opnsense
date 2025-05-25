@@ -3,7 +3,7 @@
 1. [Just Dynamic DHCP, No DNS changes, No Static IP Reservation](#just-dynamic-dhcp-no-dns-changes-no-static-ip-reservation)
 2. [Static IPV4 Reservation](#Static-IPV4-Reservation)
 3. [Using DNSMASQ as main DNS and Forward Query to Unbound](#Using-DNSMASQ-as-main-DNS-and-Forward-Query-to-Unbound)
-4. [Using TAG to set custom DNS Server for some devices](## Using-TAG-to-set-custom-DNS-Server-for-some-devices)
+4. [Using TAG to set custom DNS Server for some devices](#Using-TAG-to-set-custom-DNS-Server-for-some-devices)
     
 ## Just Dynamic DHCP, No DNS changes, No Static IP Reservation
 This assume that you have DNS service runnning on Opnsense (eg, port 53)
