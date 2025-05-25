@@ -2,6 +2,7 @@
 ## TOC
 1. [Just Dynamic DHCP, No DNS changes, No Static IP Reservation](#just-dynamic-dhcp-no-dns-changes-no-static-ip-reservation)
 2. [Static IPV4 Reservation](#Static-IPV4-Reservation)
+3. [Using DNSMASQ as main DNS and Forward Query to Unbound](#Using-DNSMASQ-as-main-DNS-and-Forward-Query-to-Unbound)
     
 ## Just Dynamic DHCP, No DNS changes, No Static IP Reservation
 This assume that you have DNS service runnning on Opnsense (eg, port 53)
@@ -81,3 +82,28 @@ Select the hosts.csv file, then hit the tick button
 
     * You can have same mac address in different line (e.g. using same mac address connect to different subnet)
     * You *can not* have same IP Address appear in multiple different line
+  
+## Using DNSMASQ as main DNS and Forward Query to Unbound 
+1. Change Unbound DNS to other port
+
+![image](https://github.com/user-attachments/assets/32f9b7db-80eb-4703-8d6b-5a1f369111d1)
+
+
+2. Set Dnsmasq DNS port to 53
+
+Service --> Dnsmasq --> General --> DNS Port = 53
+
+![image](https://github.com/user-attachments/assets/abbd264e-279d-4d1f-b7ae-708a0e604f23)
+
+3. Dnsmasq Forward Query to Unbound
+
+Service --> Dnsmasq --> Domains --> Add
+
+```
+Domain = *
+IP address = 127.0.0.1
+Port = 5053 ( or what ever your Unbound Port is on)
+```
+
+![image](https://github.com/user-attachments/assets/151d5976-c06b-4209-9589-f85f1f281785)
+
