@@ -19,7 +19,7 @@ Click Add --> Select Interface --> Fill up Start Address & End Address
 
 4. Check Firewall port 67 & 68
 
-Makesure files for port 67. 68 is there
+Makesure rules for port 67. 68 is there
 ![image](https://github.com/user-attachments/assets/0136cf95-aff7-4a9e-af6e-4955db5ee0c7)
 
 5. Check Interface to **not** Block Private Networks & bogon networks
