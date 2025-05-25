@@ -76,3 +76,7 @@ Select the hosts.csv file, then hit the tick button
 4. After Import
 
 ![image](https://github.com/user-attachments/assets/145d3202-ce8c-4b90-9e39-fa449acfaa8e)
+
+5. No duplicate IP Address
+You can have same mac address in different line (e.g. using same mac address connect to different subnet)
+You * can not* have same IP Address appear in multiple different line
