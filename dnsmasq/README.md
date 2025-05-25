@@ -83,7 +83,7 @@ Select the hosts.csv file, then hit the tick button
     * You can have same mac address in different line (e.g. using same mac address connect to different subnet)
     * You *can not* have same IP Address appear in multiple different line
   
-## Using DNSMASQ as main DNS and Forward Query to Unbound 
+## Using DNSMASQ as main DNS and Forward Query to Unbound
 1. Change Unbound DNS to other port
 
 ![image](https://github.com/user-attachments/assets/32f9b7db-80eb-4703-8d6b-5a1f369111d1)
@@ -96,14 +96,24 @@ Service --> Dnsmasq --> General --> DNS Port = 53
 ![image](https://github.com/user-attachments/assets/abbd264e-279d-4d1f-b7ae-708a0e604f23)
 
 3. Dnsmasq Forward Query to Unbound
-
-Service --> Dnsmasq --> Domains --> Add
-
+SSH into opnsense and create a **/usr/local/etc/dnsmasq.conf.d/dns.conf** file with the following content:
+ 
+ /usr/local/etc/dnsmasq.conf.d/dns.conf
 ```
-Domain = *
-IP address = 127.0.0.1
-Port = 5053 ( or what ever your Unbound Port is on)
+no-resolv
+server=127.0.0.1#5053
 ```
 
-![image](https://github.com/user-attachments/assets/151d5976-c06b-4209-9589-f85f1f281785)
+![image](https://github.com/user-attachments/assets/ef9850e1-7164-42c5-8c7a-f062a8cb428f)
 
+
+4. Restart Dnsmasq
+
+![image](https://github.com/user-attachments/assets/ec112db7-2d76-42f3-9f02-eff387b34b61)
+
+5. Check
+
+![image](https://github.com/user-attachments/assets/f7b2f630-b2eb-474c-a3ef-fbd8cd3878ae)
+
+
+   
