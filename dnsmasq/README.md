@@ -96,9 +96,10 @@ Service --> Dnsmasq --> General --> DNS Port = 53
 ![image](https://github.com/user-attachments/assets/abbd264e-279d-4d1f-b7ae-708a0e604f23)
 
 3. Dnsmasq Forward Query to Unbound
+
 SSH into opnsense and create a **/usr/local/etc/dnsmasq.conf.d/dns.conf** file with the following content:
  
- /usr/local/etc/dnsmasq.conf.d/dns.conf
+/usr/local/etc/dnsmasq.conf.d/dns.conf
 ```
 no-resolv
 server=127.0.0.1#5053
