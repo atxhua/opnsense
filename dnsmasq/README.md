@@ -1,6 +1,6 @@
 # Opnsense Dnsmasq Setup
 ## TOC
-1. [Just Dynamic DHCP, No DNS changes, No Static IP Reservation](https://www.github.com)
+1. [Just Dynamic DHCP, No DNS changes, No Static IP Reservation](#just-dynamic-dhcp-no-dns-changes-no-static-ip-reservation)
 2. [Static Reservation](https://www.github.com)
     
 ## Just Dynamic DHCP, No DNS changes, No Static IP Reservation
