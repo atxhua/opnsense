@@ -1,7 +1,7 @@
 # Opnsense Dnsmasq Setup
 ## TOC
 1. [Just Dynamic DHCP, No DNS changes, No Static IP Reservation](#just-dynamic-dhcp-no-dns-changes-no-static-ip-reservation)
-2. [Static Reservation](https://www.github.com)
+2. [Static IPV4 Reservation](Static-IPV4-Reservation)
     
 ## Just Dynamic DHCP, No DNS changes, No Static IP Reservation
 This assume that you have DNS service runnning on Opnsense (eg, port 53)
@@ -36,6 +36,7 @@ Makesure rules for port 67. 68 is there
 No static reservation just yet
    
 8. Check Dnsmasq --> Logs --> Level = Debug
+
 ![image](https://github.com/user-attachments/assets/3c8a13a3-6090-45d8-a1ed-b64789691d16)
 
 
