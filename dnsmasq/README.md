@@ -1,7 +1,7 @@
 # Opnsense Dnsmasq Setup
 ## TOC
-    * [Just Dynamic DHCP, No DNS changes, No Static IP Reservation]()
-    * [Static Reservation](www.github.com)
+1. [Just Dynamic DHCP, No DNS changes, No Static IP Reservation](https://www.github.com)
+2. [Static Reservation](https://www.github.com)
     
 ## Just Dynamic DHCP, No DNS changes, No Static IP Reservation
 This assume that you have DNS service runnning on Opnsense (eg, port 53)
