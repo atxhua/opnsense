@@ -27,8 +27,9 @@ Makesure rules for port 67. 68 is there
 
 6. Apply (and optionally hit restart)
 
-7. Now DHCP should work now
+7. DHCP should work now
+No static reservation just yet
    
-8. Check Dnsmasq --> Logs --> Level = Debug
+9. Check Dnsmasq --> Logs --> Level = Debug
 ![image](https://github.com/user-attachments/assets/3c8a13a3-6090-45d8-a1ed-b64789691d16)
 
